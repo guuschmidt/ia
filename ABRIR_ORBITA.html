@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="pt-BR" data-standalone="true">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#24483d"><meta name="description" content="Calculadoras, cotações e conversões. Sua rotina financeira em uma única órbita.">
+  <title>Órbita — Cada conta, mais simples.</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2218%22%20fill%3D%22%2324483d%22%2F%3E%3Ccircle%20cx%3D%2232%22%20cy%3D%2232%22%20r%3D%2217%22%20fill%3D%22none%22%20stroke%3D%22%23dbe9be%22%20stroke-width%3D%226%22%2F%3E%3Ccircle%20cx%3D%2248%22%20cy%3D%2221%22%20r%3D%226%22%20fill%3D%22%23e9a07a%22%2F%3E%3C%2Fsvg%3E%0A" type="image/svg+xml"><style>:root{--bg:#f7f8f4;--ink:#233c33;--muted:#7c857f;--line:#e5e8df;--green:#24483d;--lime:#e8eedc;--orange:#b66c47;--white:#fff;--font:Inter,'Segoe UI',Arial,sans-serif}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:14px}button,input,select{font:inherit}button,a,input,select{-webkit-tap-highlight-color:transparent}button{cursor:pointer}button:disabled{cursor:wait;opacity:.6}button{transition:background .15s,transform .15s}button:active{transform:translateY(1px)}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #b1c99a;outline-offset:3px}a{color:inherit;text-decoration:none}[hidden]{display:none!important}.rail{position:fixed;inset:0 auto 0 0;width:76px;background:var(--green);display:flex;align-items:center;flex-direction:column;color:#e2ead7;z-index:5}.brand-mark{font-size:47px;line-height:1;margin-top:24px}.rail-line{width:28px;height:1px;background:#ffffff20;margin:28px 0}.rail-item{font-size:23px;width:42px;height:42px;display:grid;place-items:center;border-radius:12px;background:#ffffff12}.rail-word{writing-mode:vertical-rl;transform:rotate(180deg);font-size:9px;letter-spacing:2.8px;opacity:.55;margin:auto 0}.rail-bottom{font-size:27px;margin:26px 0}.shell{margin-left:76px}.topbar{height:88px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:30px;padding:0 44px}.wordmark{font-weight:750;font-size:32px;letter-spacing:-1.8px}.wordmark>span{font-size:11px;vertical-align:top;display:inline-block;margin:5px 0 0 4px;letter-spacing:0}.topbar-caption{font-size:12px;color:var(--muted);padding-left:28px;border-left:1px solid var(--line)}.topbar-right{margin-left:auto;display:flex;align-items:center;gap:25px}.local-badge{font-size:11px;color:#64776a;display:flex;gap:7px;align-items:center}.local-badge>span{width:6px;height:6px;background:#648467;border-radius:50%}.avatar{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;border:1px solid #d9ded2;background:#ecefe5;font-size:12px;font-weight:600}main{max-width:1340px;padding:40px 44px 0;margin:auto}.intro{display:flex;justify-content:space-between;align-items:center;margin-bottom:36px}.eyebrow{font-size:9px;font-weight:650;letter-spacing:1.7px;display:flex;align-items:center;gap:7px}.eyebrow>span{height:5px;width:5px;background:var(--orange);border-radius:50%}h1{font-size:42px;font-weight:500;letter-spacing:-1.7px;margin:16px 0 12px;line-height:1.15}h1 em{font-weight:400;font-family:Georgia,serif;color:#668169}p{line-height:1.6}.intro p{font-size:13px;color:var(--muted);margin:0}.today{text-align:right;padding-top:19px}.today>span{font-size:9px;letter-spacing:1.5px;color:#98a095;display:block;margin-bottom:10px}.today time{font-size:12px}.mobile-break{display:none}.section-heading{display:flex;align-items:center;justify-content:space-between;margin-bottom:15px}.section-heading h2{font-size:13px;font-weight:600;display:flex;align-items:center;gap:13px;margin:0}.live-pill{font-size:8px;letter-spacing:.5px;font-weight:500;color:#819177;display:flex;align-items:center;gap:5px}.live-pill i{width:5px;height:5px;background:#829970;border-radius:50%}.text-button{border:0;background:none;color:#788175;font-size:11px;padding:5px}.text-button:hover{color:var(--green)}.market-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.quote-card{background:white;border:1px solid var(--line);border-radius:12px;padding:18px 18px 14px;min-width:0}.quote-top{display:flex;align-items:center;gap:9px}.currency-icon{height:32px;width:32px;flex:none;border-radius:50%;background:#f4f5ef;display:grid;place-items:center;font-size:18px;font-family:Georgia,serif}.quote-top h3{font-weight:600;font-size:11px;margin:0 0 5px}.quote-top div>span{font-size:8px;color:#98a093;letter-spacing:.5px}.quote-change{margin-left:auto;font-size:10px;color:#72896c;background:#f1f5e9;padding:4px 5px;border-radius:5px;white-space:nowrap}.quote-change.negative{color:#b67555;background:#fcf1e9}.quote-bottom{margin:18px 0 7px;display:flex;align-items:center;justify-content:space-between;gap:8px}.quote-bottom strong{font-weight:550;letter-spacing:-.7px;font-size:26px;white-space:nowrap}.quote-card small{font-size:9px;color:#8e978b}.spark{width:62px;height:25px;opacity:.5}.spark path{stroke:#9ab18b;stroke-width:1.5;stroke-dasharray:3 3;fill:none}.ptax-card{background:#edf1e5;border-color:#dfe6d4}.ptax-card .currency-icon{background:#e2e9d7}.bcb-tag{font-size:8px;letter-spacing:1px;margin-left:auto;background:#dfe7d4;padding:5px;border-radius:4px}.ptax-seal{font-size:30px;color:#a0b18e}.market-note{font-size:9px;color:#9aA094;margin:11px 1px 28px}.tabs{display:flex;gap:8px;border-bottom:1px solid var(--line);margin-bottom:24px;padding-bottom:12px}.tab{border:0;background:none;border-radius:8px;color:#828b7e;padding:12px 20px;font-size:12px;display:flex;align-items:center;gap:9px;white-space:nowrap}.tab>span{font-size:17px;line-height:1}.tab.active{color:#fff;background:var(--green);box-shadow:0 3px 5px #24483d10}.tab:not(.active):hover{background:#eaeedf;color:var(--green)}.workspace-grid{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(260px,1fr);gap:22px}.card{background:#fff;border:1px solid var(--line);border-radius:14px}.calculator{padding:23px 26px 17px}.card-heading{display:flex;align-items:center;justify-content:space-between;gap:10px}.card-heading>div{display:flex;align-items:center;gap:10px}.card-heading h2{font-size:13px;font-weight:600;margin:0;letter-spacing:-.1px}.section-number{font-size:10px;color:#a7afa0}.mode-label{font-size:7px;color:#969d8d;letter-spacing:1.2px}.display{border:1px solid #e9ece2;background:#f6f8f2;border-radius:10px;padding:14px 18px 12px;margin-top:22px}.display-top{display:flex;align-items:center;gap:8px;color:#97a18e;min-height:18px}.display-top>span{font-size:8px;letter-spacing:1px;flex:1}.icon-button{border:0;background:none;color:#929d87;font-size:17px;padding:0 1px}.angle{font-size:9px;background:#e5ebdc;border:0;border-radius:4px;padding:4px;color:var(--green)}#expression{width:100%;background:none;border:none;outline:0;font-size:46px;letter-spacing:-1.5px;color:var(--ink);text-align:right;height:76px;padding:0;min-width:0}.display-foot{display:flex;align-items:center;justify-content:space-between;color:#9ca38f;font-size:9px;min-height:15px}.display-foot .has-error{color:#b6573d}.display-dot{width:5px;height:5px;flex:none;border-radius:50%;background:#b3c09d}.keypad{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:17px}.key{border:1px solid #eaece5;background:#fff;border-radius:8px;height:48px;color:#344437;font-size:20px;font-weight:450}.key:hover{background:#f1f4eb;border-color:#d4ddca}.key.clear{color:#ab674b;background:#f9efe8;border-color:#f3e3d7;font-size:15px}.key.utility{background:#f4f5ef;font-size:17px;color:#78866d}.key.operator{background:#eaf0df;border-color:#e5ecd9;color:#4e6640;font-size:23px}.key.equals{background:var(--green);border-color:var(--green);color:#fff}.key.equals:hover,.primary-button:hover{background:#356451}.keyboard-tip{display:flex;align-items:center;justify-content:center;gap:6px;color:#a6ac9e;font-size:9px;margin-top:17px}.keyboard-tip>span{font-size:14px}kbd{font-size:8px;border:1px solid #e6e9df;border-radius:3px;padding:2px 4px;background:#fbfcf8;font-family:inherit}.side-stack{display:flex;flex-direction:column;gap:18px}.history{padding:21px 22px;min-height:259px;display:flex;flex-direction:column}.small-icon{font-size:19px;color:#8c9b7e}#history-list{flex:1;min-height:145px;max-height:243px;overflow:auto}.history-empty{text-align:center;color:#a1aa96;padding:21px 0 10px}.history-empty .empty-icon{font-size:30px;opacity:.5}.history-empty p{font-size:11px;margin:10px 0 4px}.history-empty small{font-size:10px;color:#b5baad}.history-note{border-top:1px solid #f0f2eb;margin:10px 0 0;padding-top:12px;font-size:9px;color:#a9b09e}.history-item{display:flex;justify-content:space-between;align-items:center;border:0;border-bottom:1px solid #eff1e9;background:none;padding:13px 0;width:100%;text-align:left;color:#9aa28e;font-size:11px;gap:10px}.history-item span{overflow:hidden;text-overflow:ellipsis}.history-item strong{color:#42523e;font-weight:600;white-space:nowrap}.tip-card{background:#e9eedf;border:1px solid #e2e9d6;border-radius:13px;padding:24px;position:relative;overflow:hidden;flex:1}.tip-symbol{position:absolute;right:21px;top:49px;font-size:104px;line-height:1;color:#d3dfc4;transform:rotate(15deg)}.tip-card .eyebrow{font-size:7px;letter-spacing:1px;color:#8b9c7b;position:relative;z-index:1}.tip-card h3{font-family:Georgia,serif;font-weight:400;font-size:29px;line-height:1.18;letter-spacing:-.6px;margin:18px 0 11px;position:relative}.tip-card p{font-size:11px;color:#8b987f;margin:0;position:relative}.tip-bottom{display:flex;justify-content:space-between;align-items:center;margin-top:23px;color:#839573}.tip-bottom>span:first-child{font-size:7px;letter-spacing:1px}.tip-bottom>span:last-child{font-size:20px}.bottom-strip{display:flex;align-items:center;gap:15px;padding:22px 0;margin-top:23px;border-top:1px solid var(--line)}.strip-icon{display:grid;place-items:center;height:38px;width:38px;background:#edf0e6;border-radius:10px;font-size:22px;color:#869375}.bottom-strip strong{font-size:11px;font-weight:500}.bottom-strip p{margin:5px 0 0;color:#a2a996;font-size:10px}.strip-right{margin-left:auto;font-size:8px;letter-spacing:1px;color:#98a08b;display:flex;align-items:center;gap:22px}.strip-right>span{font-size:22px}footer{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding:20px 44px;font-size:9px;color:#9fa695;max-width:1340px;margin:auto}.footer-dot{margin:0 8px}.footer-star{color:#839572;margin-left:10px}.scientific-keys{display:grid;grid-template-columns:repeat(6,1fr);gap:7px;margin-top:15px}.scientific-keys button{border:1px solid #e4e9db;border-radius:6px;background:#f1f5e9;color:#607354;height:35px}.form-workspace{display:grid;grid-template-columns:1.25fr 1fr;gap:22px}.form-card{padding:28px}.card-subtitle{font-size:12px;color:var(--muted);margin:14px 0 28px}form{display:flex;flex-direction:column;gap:22px}label{display:flex;flex-direction:column;gap:10px;color:#6c7b64;font-size:11px;font-weight:500;min-width:0}input,select{padding:13px 12px;border:1px solid #dfe6d7;border-radius:7px;background:#fbfcf9;color:var(--ink);width:100%;min-width:0;font-size:14px}input:focus,select:focus{border-color:#8a9f78}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}.primary-button{background:var(--green);color:white;border:0;border-radius:8px;padding:15px 18px;display:flex;justify-content:space-between;font-size:12px;align-items:center}.primary-button>span{font-size:19px}.error-message{font-size:11px;color:#b55f42;margin:0;min-height:0}.error-message:empty{display:none}.result-card{border-radius:14px;background:#e9eedf;padding:30px;display:flex;flex-direction:column;align-items:flex-start;min-width:0}.result-card .eyebrow{font-size:8px;color:#829571;line-height:1.8}.result-orbit{display:block;font-size:50px;color:#a9ba93;margin:26px 0 4px}.result-card>p:not(.result-footnote){font-size:12px;color:#7c8d6f}.result-card output{font-size:36px;font-weight:500;letter-spacing:-1px;overflow-wrap:anywhere;max-width:100%}.breakdown{width:100%;border-top:1px solid #d8e1cc;margin-top:27px;padding-top:15px;display:flex;flex-direction:column;gap:18px}.breakdown>div{display:flex;justify-content:space-between;gap:15px;font-size:11px}.breakdown span{color:#819171}.breakdown strong{font-weight:500;text-align:right;overflow-wrap:anywhere}.result-footnote{font-size:10px;color:#8b997f;margin-top:auto;padding-top:28px;line-height:1.7}.conversion-row{display:grid;grid-template-columns:1fr 32px 1fr;gap:10px;align-items:end}.swap-button{height:43px;padding:0;background:none;border:0;font-size:23px;color:#809572}.source-badge{font-size:7px;padding:6px;border-radius:4px;background:#eef2e7;color:#879878;letter-spacing:.7px}.toast{position:fixed;bottom:25px;left:50%;transform:translateX(-50%);padding:13px 22px;border-radius:9px;background:var(--green);color:white;box-shadow:0 5px 25px #0002;z-index:10;font-size:12px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}@media(min-width:1500px){main{padding-top:48px}.intro{margin-bottom:42px}.key{height:54px}.display{padding-top:19px;padding-bottom:17px}.tip-card{padding:28px}}@media(max-width:1150px){.topbar{padding:0 28px}main{padding:32px 28px 0}.market-grid{gap:10px}.quote-card{padding:14px 12px}.quote-top{gap:6px}.quote-top h3{font-size:10px}.quote-change{font-size:8px}.quote-bottom strong{font-size:23px}.spark{width:36px}.currency-icon{width:27px;height:27px;font-size:16px}.tab{padding:12px 15px}.calculator{padding:20px}.mode-label{font-size:6px}.workspace-grid{gap:17px}.tip-card{padding:21px}.form-card,.result-card{padding:23px}.result-card output{font-size:29px}}@media(max-width:900px){.rail{width:58px}.shell{margin-left:58px}.topbar{height:74px}.topbar-caption{display:none}.market-grid{grid-template-columns:repeat(2,1fr)}.quote-top h3{font-size:12px}.quote-top div>span{font-size:9px}.quote-bottom strong{font-size:27px}.quote-change{font-size:10px}.quote-card{padding:17px}.spark{width:80px}.workspace-grid{grid-template-columns:minmax(0,1.4fr) minmax(230px,1fr)}.mode-label{display:none}.tab{padding:11px 13px;gap:6px;font-size:11px}.tabs{gap:4px}.form-workspace{grid-template-columns:1fr}.result-card{min-height:320px}.result-orbit{margin:15px 0 0}.today{display:none}.tip-card h3{font-size:27px}.keyboard-tip{font-size:8px;gap:4px}.strip-right{display:none}h1{font-size:38px}.history{padding:20px 17px}}@media(max-width:660px){.rail{display:none}.shell{margin-left:0}.topbar{padding:0 21px;height:72px}.wordmark{font-size:29px}.topbar-right{gap:15px}.local-badge{font-size:9px}main{padding:29px 18px 0}.intro{margin-bottom:27px}h1{font-size:35px;letter-spacing:-1.3px}.intro p{font-size:11px}.eyebrow{font-size:8px}.section-heading h2{font-size:12px;gap:8px}.live-pill{font-size:6px;letter-spacing:0}.market-grid{gap:9px}.quote-card{padding:13px 11px;border-radius:10px}.quote-top h3{font-size:10px}.quote-top div>span{font-size:8px}.quote-change{font-size:8px;padding:3px}.currency-icon{width:23px;height:23px;font-size:14px}.quote-bottom strong{font-size:23px}.quote-bottom{margin-top:14px}.quote-card small{font-size:8px}.spark{width:35px}.market-note{font-size:8px;line-height:1.7;margin-bottom:22px}.tabs{overflow:auto;scrollbar-width:none;margin:0 -18px 18px;padding:0 18px 12px;gap:5px}.tab{padding:12px 13px;font-size:11px}.workspace-grid{grid-template-columns:1fr}.calculator{padding:19px}.card-heading h2{font-size:12px}.mode-label{display:inline;font-size:6px}.key{height:52px}.keyboard-tip{font-size:8px}.side-stack{display:grid;grid-template-columns:1fr}.history{min-height:190px}#history-list{min-height:115px}.tip-card{min-height:220px}.tip-symbol{right:40px;top:40px;font-size:130px}.tip-card h3{font-size:30px}.tip-bottom{margin-top:17px}.bottom-strip{margin-top:20px;padding:20px 0}.bottom-strip strong{font-size:10px}.bottom-strip p{font-size:9px}footer{padding:18px;font-size:8px}.form-card,.result-card{padding:21px}.form-row{gap:12px}.source-badge{font-size:6px}.conversion-row{gap:5px;grid-template-columns:1fr 25px 1fr}select{font-size:12px;padding:13px 8px}.form-card h2{font-size:12px}.result-card output{font-size:34px}.card-subtitle{font-size:11px}.scientific-keys{gap:5px}.scientific-keys button{font-size:12px}}@media(prefers-reduced-motion:reduce){*{transition:none!important}} 
+
+.inline-icon{display:inline-block;width:1em;height:1em;vertical-align:middle;flex:none}.tip-symbol .inline-icon{width:1em;height:1em}.footer-star{font-size:12px}
+</style>
+  
+</head>
+<body>
+  <aside class="rail" aria-label="Órbita"><a class="brand-mark" href="#" aria-label="Órbita início">◌</a><span class="rail-line"></span><span class="rail-item active" title="Ferramentas">▦</span><span class="rail-word">MENOS ESFORÇO. MAIS CLAREZA.</span><span class="rail-bottom"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="12" stroke-linecap="round" aria-hidden="true" class="inline-icon"><path d="M50 12v76M12 50h76M23 23l54 54M23 77l54-54"/></svg></span></aside>
+  <div class="shell">
+    <header class="topbar"><a href="#" class="wordmark">órbita<span>®</span></a><span class="topbar-caption">Seu espaço para calcular.</span><div class="topbar-right"><span class="local-badge"><span></span> Ferramentas gratuitas</span><span class="avatar" aria-label="Perfil local">O.</span></div></header>
+    <main>
+      <section class="intro"><div><div class="eyebrow"><span></span> NÚMEROS QUE FAZEM SENTIDO</div><h1>Cada conta,<br class="mobile-break"> <em>mais simples.</em></h1><p>Calcule, planeje e converta. Tudo no mesmo lugar.</p></div><div class="today"><span>SEU DIA EM NÚMEROS</span><time id="today"></time></div></section>
+      <section class="market-section" aria-labelledby="market-title"><div class="section-heading"><h2 id="market-title">De olho no mercado <span class="live-pill"><i></i> ATUALIZAÇÃO AUTOMÁTICA</span></h2><button class="text-button" id="refresh-rates">↻ <span>Atualizar</span></button></div>
+        <div class="market-grid">
+          <article class="quote-card"><div class="quote-top"><span class="currency-icon">$</span><div><h3>Dólar americano</h3><span>USD / BRL</span></div><span class="quote-change" id="change-USD">—</span></div><div class="quote-bottom"><strong id="rate-USD">—</strong><svg class="spark" viewBox="0 0 100 30" aria-hidden="true"><path d="M0 22H100"/></svg></div><small id="stamp-USD">Consultando cotação…</small></article>
+          <article class="quote-card"><div class="quote-top"><span class="currency-icon">€</span><div><h3>Euro</h3><span>EUR / BRL</span></div><span class="quote-change" id="change-EUR">—</span></div><div class="quote-bottom"><strong id="rate-EUR">—</strong><svg class="spark" viewBox="0 0 100 30" aria-hidden="true"><path d="M0 22H100"/></svg></div><small id="stamp-EUR">Consultando cotação…</small></article>
+          <article class="quote-card"><div class="quote-top"><span class="currency-icon">£</span><div><h3>Libra esterlina</h3><span>GBP / BRL</span></div><span class="quote-change" id="change-GBP">—</span></div><div class="quote-bottom"><strong id="rate-GBP">—</strong><svg class="spark" viewBox="0 0 100 30" aria-hidden="true"><path d="M0 22H100"/></svg></div><small id="stamp-GBP">Consultando cotação…</small></article>
+          <article class="quote-card ptax-card"><div class="quote-top"><span class="currency-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" class="inline-icon"><path d="M6 18 18 6M6 6h12v12"/></svg></span><div><h3>PTAX de fechamento</h3><span>USD / BRL · VENDA</span></div><span class="bcb-tag">BCB</span></div><div class="quote-bottom"><strong id="rate-PTAX">—</strong><span class="ptax-seal">◎</span></div><small id="stamp-PTAX">Consultando Banco Central…</small></article>
+        </div><p class="market-note" id="market-note">Câmbio comercial: AwesomeAPI · Atualização a cada 60 s · PTAX: Banco Central do Brasil</p>
+      </section>
+      <nav class="tabs" aria-label="Ferramentas" role="tablist"><button id="tab-normal" class="tab active" data-tab="normal" role="tab" aria-selected="true" aria-controls="calculator-panel"><span>▦</span> Normal</button><button id="tab-scientific" class="tab" data-tab="scientific" role="tab" aria-selected="false" aria-controls="calculator-panel"><span>ƒ</span> Científica</button><button id="tab-financial" class="tab" data-tab="financial" role="tab" aria-selected="false" aria-controls="financial-panel"><span>◷</span> Financeira</button><button id="tab-currency" class="tab" data-tab="currency" role="tab" aria-selected="false" aria-controls="currency-panel"><span>⇄</span> Câmbio PTAX</button><button id="tab-measures" class="tab" data-tab="measures" role="tab" aria-selected="false" aria-controls="measures-panel"><span>⌁</span> Medidas</button></nav>
+      <section id="calculator-panel" class="tool-panel" role="tabpanel" aria-labelledby="tab-normal">
+        <div class="workspace-grid"><article class="calculator card"><div class="card-heading"><div><span class="section-number">01 /</span><h2 id="calculator-title">Calculadora normal</h2></div><span class="mode-label" id="calculator-mode">O ESSENCIAL, BEM FEITO</span></div>
+          <div class="display"><div class="display-top"><span id="expression-label">VAMOS FAZER AS CONTAS?</span><button id="angle-mode" class="angle" hidden>DEG</button><button id="copy-result" class="icon-button" aria-label="Copiar resultado" title="Copiar resultado">⧉</button></div><label class="sr-only" for="expression">Expressão matemática</label><input id="expression" inputmode="decimal" autocomplete="off" spellcheck="false" value="0" aria-describedby="calculator-error"><div class="display-foot"><span id="calculator-error" role="status">Um número de cada vez. Sem complicação.</span><span class="display-dot"></span></div></div>
+          <div id="scientific-keys" class="scientific-keys" hidden><button data-key="sin(">sin</button><button data-key="cos(">cos</button><button data-key="tan(">tan</button><button data-key="log(">log</button><button data-key="ln(">ln</button><button data-key="sqrt(">√</button><button data-key="^">xʸ</button><button data-key="π">π</button><button data-key="e">e</button><button data-key="!">n!</button><button data-key="(">(</button><button data-key=")">)</button></div>
+          <div class="keypad"><button class="key clear" data-action="clear">AC</button><button class="key utility" data-action="sign">+/−</button><button class="key utility" data-key="%">%</button><button class="key operator" data-key="÷">÷</button><button class="key" data-key="7">7</button><button class="key" data-key="8">8</button><button class="key" data-key="9">9</button><button class="key operator" data-key="×">×</button><button class="key" data-key="4">4</button><button class="key" data-key="5">5</button><button class="key" data-key="6">6</button><button class="key operator" data-key="−">−</button><button class="key" data-key="1">1</button><button class="key" data-key="2">2</button><button class="key" data-key="3">3</button><button class="key operator" data-key="+">+</button><button class="key" data-key="0">0</button><button class="key" data-key=",">,</button><button class="key utility" data-action="backspace" aria-label="Apagar último caractere">⌫</button><button class="key equals" data-action="equals">=</button></div>
+          <div class="keyboard-tip"><span>⌨︎</span> Seu teclado também faz parte da conta. <kbd>enter</kbd> para calcular</div>
+        </article>
+        <aside class="side-stack"><article class="history card"><div class="card-heading"><div><span class="small-icon">↶</span><h2>Histórico</h2></div><button class="text-button" id="clear-history">Limpar</button></div><div id="history-list"></div><p class="history-note">Salvo apenas neste navegador.</p></article><article class="tip-card"><span class="tip-symbol"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="12" stroke-linecap="round" aria-hidden="true" class="inline-icon"><path d="M50 12v76M12 50h76M23 23l54 54M23 77l54-54"/></svg></span><div class="eyebrow">PEQUENOS ATALHOS, GRANDES IDEIAS</div><h3>Mais espaço<br>para pensar.</h3><p>Deixe as contas com a gente.<br>O próximo passo é seu.</p><div class="tip-bottom"><span>FEITO PARA O SEU DIA A DIA</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" class="inline-icon"><path d="M6 18 18 6M6 6h12v12"/></svg></span></div></article></aside></div>
+      </section>
+      <section id="financial-panel" class="tool-panel" role="tabpanel" aria-labelledby="tab-financial" hidden><div class="form-workspace"><article class="card form-card"><div class="card-heading"><div><span class="section-number">02 /</span><h2>Seu dinheiro, em perspectiva</h2></div></div><p class="card-subtitle">Simule o futuro e planeje o próximo passo.</p><form id="finance-form"><label>Tipo de simulação<select id="finance-mode"><option value="compound">Investimento · juros compostos</option><option value="simple">Juros simples</option><option value="loan">Financiamento · tabela Price</option></select></label><div class="form-row"><label>Valor inicial (R$)<input id="principal" type="number" min="0" step="any" value="10000" required></label><label id="contribution-label">Aporte mensal (R$)<input id="contribution" type="number" min="0" step="any" value="500"></label></div><div class="form-row"><label>Taxa de juros (% ao mês)<input id="interest-rate" type="number" min="0" max="100" step="any" value="1" required></label><label>Prazo (meses)<input id="months" type="number" min="1" max="1200" step="1" value="12" required></label></div><button class="primary-button" type="submit">Calcular simulação <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" class="inline-icon"><path d="M6 18 18 6M6 6h12v12"/></svg></span></button><p id="finance-error" class="error-message" role="alert"></p></form></article><article class="result-card"><div class="eyebrow">UMA VISÃO DO SEU FUTURO</div><span class="result-orbit">◎</span><p id="finance-result-label">Saldo ao final do período</p><output id="finance-total">—</output><div class="breakdown"><div><span id="invested-label">Total investido</span><strong id="finance-invested">—</strong></div><div><span id="interest-label">Juros acumulados</span><strong id="finance-interest">—</strong></div><div id="payment-row" hidden><span>Parcela mensal</span><strong id="finance-payment">—</strong></div></div><p class="result-footnote" id="finance-note">Aportes ao final de cada mês. Simulação bruta, sem impostos, taxas ou inflação.</p></article></div></section>
+      <section id="currency-panel" class="tool-panel" role="tabpanel" aria-labelledby="tab-currency" hidden><div class="form-workspace"><article class="card form-card"><div class="card-heading"><div><span class="section-number">03 /</span><h2>Câmbio com referência</h2></div><span class="source-badge">BANCO CENTRAL</span></div><p class="card-subtitle">Converta com a PTAX oficial da data que você escolher.</p><form id="currency-form"><div class="form-row"><label>Valor a converter<input id="currency-amount" type="number" value="1000" min="0" step="any" required></label><label>Data de referência<input id="reference-date" type="date" required></label></div><div class="conversion-row"><label>De<select id="currency-from"><option value="USD">USD · Dólar americano</option><option value="BRL">BRL · Real brasileiro</option><option value="EUR">EUR · Euro</option><option value="GBP">GBP · Libra esterlina</option></select></label><button type="button" class="swap-button" id="swap-currencies" aria-label="Inverter moedas">⇄</button><label>Para<select id="currency-to"><option value="BRL">BRL · Real brasileiro</option><option value="USD">USD · Dólar americano</option><option value="EUR">EUR · Euro</option><option value="GBP">GBP · Libra esterlina</option></select></label></div><label>Taxa do boletim<select id="quote-side"><option value="sell">PTAX de venda</option><option value="buy">PTAX de compra</option></select></label><button type="submit" id="convert-currency" class="primary-button">Consultar e converter <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" class="inline-icon"><path d="M6 18 18 6M6 6h12v12"/></svg></span></button><p id="currency-error" class="error-message" role="alert"></p></form></article><article class="result-card"><div class="eyebrow">CONVERSÃO COM TRANSPARÊNCIA</div><span class="result-orbit">⇄</span><p id="currency-result-label">Valor convertido</p><output id="currency-result">—</output><div class="breakdown"><div><span>Taxa de conversão</span><strong id="currency-unit-rate">—</strong></div><div><span>Referência efetiva</span><strong id="currency-date">—</strong></div><div><span>Boletim</span><strong>Fechamento</strong></div></div><p class="result-footnote">A PTAX é uma taxa de referência, publicada em dias úteis. Não inclui IOF, tarifas ou spread. Datas sem fechamento não são substituídas automaticamente.</p></article></div></section>
+      <section id="measures-panel" class="tool-panel" role="tabpanel" aria-labelledby="tab-measures" hidden><div class="form-workspace"><article class="card form-card"><div class="card-heading"><div><span class="section-number">04 /</span><h2>Outra medida. Mesmo valor.</h2></div></div><p class="card-subtitle">Do quilômetro ao byte, encontre a unidade certa.</p><form id="measures-form"><label>O que vamos converter?<select id="measure-category"></select></label><label>Valor<input id="measure-amount" type="number" value="1" step="any" required></label><div class="conversion-row"><label>De<select id="measure-from"></select></label><button type="button" class="swap-button" id="swap-measures" aria-label="Inverter unidades">⇄</button><label>Para<select id="measure-to"></select></label></div><button type="submit" class="primary-button">Converter medida <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" class="inline-icon"><path d="M6 18 18 6M6 6h12v12"/></svg></span></button><p id="measure-error" class="error-message" role="alert"></p></form></article><article class="result-card"><div class="eyebrow">NOVAS FORMAS DE VER O MESMO NÚMERO</div><span class="result-orbit">⌁</span><p id="measure-result-label">Resultado da conversão</p><output id="measure-result">—</output><div class="breakdown"><div><span>Equivalência</span><strong id="measure-equivalence">—</strong></div><div><span>Categoria</span><strong id="measure-category-label">Comprimento</strong></div></div><p class="result-footnote">Conversões instantâneas, calculadas no seu dispositivo. Unidades decimais e binárias são identificadas separadamente.</p></article></div></section>
+      <section class="bottom-strip"><span class="strip-icon">◈</span><div><strong>Uma ferramenta para cada possibilidade.</strong><p>Da conta rápida ao planejamento de amanhã.</p></div><span class="strip-right">SIMPLES POR NATUREZA. <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" class="inline-icon"><path d="M6 18 18 6M6 6h12v12"/></svg></span></span></section>
+    </main>
+    <footer><span>órbita <span class="footer-dot">·</span> Clareza em cada cálculo.</span><span>Feito para facilitar <span class="footer-star"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="12" stroke-linecap="round" aria-hidden="true" class="inline-icon"><path d="M50 12v76M12 50h76M23 23l54 54M23 77l54-54"/></svg></span></span></footer>
+  </div><div class="toast" id="toast" role="status" hidden></div>
+<script>
+'use strict';
+const functions = { sin: Math.sin, cos: Math.cos, tan: Math.tan, asin: Math.asin, acos: Math.acos, atan: Math.atan, sqrt: Math.sqrt, ln: Math.log, log: Math.log10, abs: Math.abs, exp: Math.exp };
+
+// A bounded expression parser. Expressions are never evaluated as JavaScript.
+function calculate(input, degrees = true) {
+  const source = input.replaceAll('×', '*').replaceAll('÷', '/').replaceAll('−', '-').replaceAll(',', '.').replaceAll('π', 'pi');
+  if (source.length > 500) throw new Error('Expressão muito longa.');
+  const tokens = source.match(/(?:\d+(?:\.\d*)?|\.\d+)(?:[eE][+-]?\d+)?|[a-z]+|[+\-*/^()%!]/g) || [];
+  if (tokens.join('') !== source.replace(/\s/g, '')) throw new Error('Expressão inválida.');
+  let pos = 0;
+  const peek = () => tokens[pos];
+  const take = () => tokens[pos++];
+  const require = (s) => { if (take() !== s) throw new Error('Confira os parênteses.'); };
+  function primary() {
+    const token = take();
+    let value;
+    if (token === '(') { value = sum(); require(')'); }
+    else if (token === 'pi') value = Math.PI;
+    else if (token === 'e') value = Math.E;
+    else if (functions[token]) {
+      require('('); let arg = sum(); require(')');
+      if (degrees && ['sin', 'cos', 'tan'].includes(token)) arg *= Math.PI / 180;
+      if (token === 'tan' && Math.abs(Math.cos(arg)) < 1e-14) throw new Error('Tangente indefinida neste ângulo.');
+      value = functions[token](arg);
+      if (degrees && ['asin', 'acos', 'atan'].includes(token)) value *= 180 / Math.PI;
+    } else if (token && /^(\d|\.)/.test(token)) value = Number(token);
+    else throw new Error('Complete a expressão.');
+    while (peek() === '%' || peek() === '!') {
+      if (take() === '%') value /= 100;
+      else {
+        if (!Number.isInteger(value) || value < 0 || value > 170) throw new Error('Fatorial aceita inteiros de 0 a 170.');
+        let product = 1; for (let n = 2; n <= value; n++) product *= n; value = product;
+      }
+    }
+    return value;
+  }
+  function power() { const value = primary(); return peek() === '^' ? (take(), value ** unary()) : value; }
+  function unary() { if (peek() === '+') { take(); return unary(); } if (peek() === '-') { take(); return -unary(); } return power(); }
+  function product() { let value = unary(); while (peek() === '*' || peek() === '/') { const op = take(); const right = unary(); if (op === '/' && right === 0) throw new Error('Não é possível dividir por zero.'); value = op === '*' ? value * right : value / right; } return value; }
+  function sum() { let value = product(); while (peek() === '+' || peek() === '-') { const op = take(); const right = product(); value = op === '+' ? value + right : value - right; } return value; }
+  const result = sum();
+  if (pos !== tokens.length) throw new Error('Use um operador entre os valores.');
+  if (!Number.isFinite(result)) throw new Error('Resultado fora do domínio ou do limite numérico.');
+  return Object.is(result, -0) ? 0 : result;
+}
+
+function finance({ mode, principal, rate, months, contribution = 0 }) {
+  if (![principal, rate, months, contribution].every(Number.isFinite) || principal < 0 || contribution < 0 || rate < 0 || rate > 100 || !Number.isInteger(months) || months < 1 || months > 1200) throw new Error('Informe valores positivos, taxa de 0 a 100% e prazo de 1 a 1.200 meses.');
+  const r = rate / 100;
+  let total, invested, payment = 0;
+  if (mode === 'loan') {
+    payment = r === 0 ? principal / months : principal * r / (1 - (1 + r) ** -months);
+    total = payment * months; invested = principal;
+  } else if (mode === 'simple') {
+    invested = principal; total = principal * (1 + r * months);
+  } else {
+    invested = principal + contribution * months;
+    total = r === 0 ? invested : principal * (1 + r) ** months + contribution * (((1 + r) ** months - 1) / r);
+  }
+  if (![total, invested, payment].every(Number.isFinite)) throw new Error('Os valores excedem o limite de cálculo.');
+  return { total, invested, interest: total - invested, payment };
+}
+
+const units = {
+  length: { label: 'Comprimento', units: { m: ['Metro', 1], km: ['Quilômetro', 1000], cm: ['Centímetro', .01], mm: ['Milímetro', .001], in: ['Polegada', .0254], ft: ['Pé', .3048], yd: ['Jarda', .9144], mi: ['Milha', 1609.344] } },
+  mass: { label: 'Massa', units: { kg: ['Quilograma', 1], g: ['Grama', .001], mg: ['Miligrama', .000001], t: ['Tonelada', 1000], lb: ['Libra', .45359237], oz: ['Onça', .028349523125] } },
+  temperature: { label: 'Temperatura', units: { C: ['Celsius', 1], F: ['Fahrenheit', 1], K: ['Kelvin', 1] } },
+  area: { label: 'Área', units: { m2: ['Metro quadrado', 1], km2: ['Quilômetro quadrado', 1e6], ha: ['Hectare', 1e4], acre: ['Acre', 4046.8564224], ft2: ['Pé quadrado', .09290304] } },
+  volume: { label: 'Volume', units: { L: ['Litro', 1], mL: ['Mililitro', .001], m3: ['Metro cúbico', 1000], gal: ['Galão americano', 3.785411784] } },
+  speed: { label: 'Velocidade', units: { 'km/h': ['Quilômetros por hora', 1], 'm/s': ['Metros por segundo', 3.6], mph: ['Milhas por hora', 1.609344], kn: ['Nó', 1.852] } },
+  time: { label: 'Tempo', units: { s: ['Segundo', 1], min: ['Minuto', 60], h: ['Hora', 3600], d: ['Dia', 86400], week: ['Semana', 604800] } },
+  data: { label: 'Dados', units: { B: ['Byte', 1], KB: ['Kilobyte (decimal)', 1000], MB: ['Megabyte (decimal)', 1e6], GB: ['Gigabyte (decimal)', 1e9], KiB: ['Kibibyte', 1024], MiB: ['Mebibyte', 1048576], GiB: ['Gibibyte', 1073741824] } }
+};
+
+function convert(value, category, from, to) {
+  if (!Number.isFinite(value)) throw new Error('Informe um valor válido.');
+  const group = units[category]?.units;
+  if (!group?.[from] || !group?.[to]) throw new Error('Unidade inválida.');
+  if (category === 'temperature') {
+    const c = from === 'F' ? (value - 32) * 5 / 9 : from === 'K' ? value - 273.15 : value;
+    if (c < -273.15 - 1e-10) throw new Error('Temperatura abaixo do zero absoluto.');
+    return to === 'F' ? c * 9 / 5 + 32 : to === 'K' ? c + 273.15 : c;
+  }
+  const result = value * group[from][1] / group[to][1];
+  if (!Number.isFinite(result)) throw new Error('O valor excede o limite de cálculo.');
+  return result;
+}
+
+function convertCurrency(amount, from, to, rates, side = 'sell') {
+  if (!Number.isFinite(amount) || amount < 0) throw new Error('Informe um valor positivo.');
+  const a = from === 'BRL' ? 1 : rates[from]?.[side];
+  const b = to === 'BRL' ? 1 : rates[to]?.[side];
+  if (!(a > 0) || !(b > 0)) throw new Error('Cotação indisponível para a moeda selecionada.');
+  const result = amount * a / b;
+  if (!Number.isFinite(result)) throw new Error('O valor excede o limite de cálculo.');
+  return result;
+}
+
+
+// Shared by the HTTP server and the standalone browser version.
+const cache = new Map();
+const currencyCodes = ['USD', 'EUR', 'GBP'];
+
+async function upstream(url) {
+  const response = await fetch(url, { signal: AbortSignal.timeout(12000), headers: { Accept: 'application/json' } });
+  if (!response.ok) throw new Error(`Fonte respondeu HTTP ${response.status}`);
+  return response.json();
+}
+
+async function marketRates() {
+  const key = 'market'; const cached = cache.get(key);
+  if (cached && Date.now() - cached.time < 60000) return cached.value;
+  const data = await upstream('https://economia.awesomeapi.com.br/json/last/USD-BRL,EUR-BRL,GBP-BRL');
+  const rates = {};
+  for (const code of currencyCodes) {
+    const quote = data[`${code}BRL`];
+    if (!quote || !(Number(quote.bid) > 0) || !(Number(quote.ask) > 0) || !Number.isFinite(Number(quote.pctChange))) throw new Error('Cotação inválida');
+    rates[code] = { buy: Number(quote.bid), sell: Number(quote.ask), change: Number(quote.pctChange), timestamp: new Date(Number(quote.timestamp) * 1000).toISOString() };
+  }
+  const value = { source: 'AwesomeAPI', fetchedAt: new Date().toISOString(), rates };
+  cache.set(key, { time: Date.now(), value }); return value;
+}
+
+function bcbDate(iso) { const [y, m, d] = iso.split('-'); return `${m}-${d}-${y}`; }
+function validDate(date) { return /^\d{4}-\d{2}-\d{2}$/.test(date) && !Number.isNaN(Date.parse(date)) && new Date(date).toISOString().slice(0, 10) === date; }
+function brazilDate() { return new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Sao_Paulo', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date()); }
+
+async function ptaxRates(date, latest = false) {
+  const key = `ptax:${date}:${latest}`; const cached = cache.get(key);
+  if (cached && Date.now() - cached.time < 300000) return cached.value;
+  const start = new Date(`${date}T12:00:00Z`); start.setUTCDate(start.getUTCDate() - 10);
+  const quotes = await Promise.all(currencyCodes.map(async code => {
+    const endpoint = latest ? 'CotacaoMoedaPeriodo(moeda=@moeda,dataInicial=@dataInicial,dataFinalCotacao=@dataFinalCotacao)' : 'CotacaoMoedaDia(moeda=@moeda,dataCotacao=@dataCotacao)';
+    const params = new URLSearchParams({ '@moeda': `'${code}'`, '$format': 'json', '$top': '100', '$orderby': 'dataHoraCotacao desc' });
+    if (latest) { params.set('@dataInicial', `'${bcbDate(start.toISOString().slice(0, 10))}'`); params.set('@dataFinalCotacao', `'${bcbDate(date)}'`); }
+    else params.set('@dataCotacao', `'${bcbDate(date)}'`);
+    const data = await upstream(`https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/${endpoint}?${params}`);
+    const quote = data.value?.find(item => item.tipoBoletim === 'Fechamento');
+    if (!quote) { const error = new Error('Sem boletim de fechamento para a data. Escolha um dia útil anterior ou aguarde a publicação do Banco Central.'); error.status = 404; throw error; }
+    if (!(quote.cotacaoCompra > 0) || !(quote.cotacaoVenda > 0)) throw new Error('Cotação PTAX inválida');
+    return [code, { buy: quote.cotacaoCompra, sell: quote.cotacaoVenda, timestamp: quote.dataHoraCotacao, date: quote.dataHoraCotacao.slice(0, 10) }];
+  }));
+  if (new Set(quotes.map(([, quote]) => quote.date)).size !== 1) throw new Error('Boletins com datas diferentes. Tente novamente.');
+  const value = { source: 'Banco Central do Brasil', date: quotes[0][1].date, requestedDate: date, bulletin: 'Fechamento', rates: Object.fromEntries(quotes), fetchedAt: new Date().toISOString() };
+  cache.set(key, { time: Date.now(), value }); return value;
+}
+
+
+
+
+const $ = (id) => document.getElementById(id);
+const number = (n, max = 10) => new Intl.NumberFormat('pt-BR', { maximumFractionDigits: max }).format(n);
+const money = (n, currency = 'BRL', digits = 2) => new Intl.NumberFormat('pt-BR', { style: 'currency', currency, minimumFractionDigits: digits, maximumFractionDigits: digits }).format(n);
+const dateLabel = (date) => new Date(`${date}T12:00:00Z`).toLocaleDateString('pt-BR', { timeZone: 'America/Sao_Paulo' });
+const today = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Sao_Paulo', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
+$('today').textContent = new Date().toLocaleDateString('pt-BR', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'America/Sao_Paulo' });
+$('reference-date').value = today;
+$('reference-date').max = today;
+let activeTab = 'normal', degrees = true, finished = false, history = [], currencyRequest = 0;
+try { const stored = JSON.parse(localStorage.getItem('orbita.history') || '[]'); if (Array.isArray(stored)) history = stored.filter(item => typeof item.expression === 'string' && typeof item.result === 'number' && Number.isFinite(item.result)).slice(0, 25); } catch { /* Private browsing may disable storage. */ }
+
+let toastTimer;
+function toast(message) { $('toast').textContent = message; $('toast').hidden = false; clearTimeout(toastTimer); toastTimer = setTimeout(() => { $('toast').hidden = true; }, 2600); }
+function saveHistory() { try { localStorage.setItem('orbita.history', JSON.stringify(history)); } catch { /* Calculation remains usable without storage. */ } }
+function renderHistory() {
+  $('history-list').replaceChildren();
+  if (!history.length) { $('history-list').innerHTML = '<div class="history-empty"><span class="empty-icon">↶</span><p>Suas contas ficam por aqui.</p><small>Faça um cálculo para começar.</small></div>'; return; }
+  history.forEach(item => {
+    const button = document.createElement('button'); button.className = 'history-item'; button.title = 'Usar este resultado';
+    const expression = document.createElement('span'); expression.textContent = item.expression + ' =';
+    const result = document.createElement('strong'); result.textContent = number(item.result);
+    button.append(expression, result); button.addEventListener('click', () => { $('expression').value = String(item.result).replace('.', ','); finished = true; $('calculator-error').textContent = 'Resultado recuperado do histórico.'; $('calculator-error').classList.remove('has-error'); }); $('history-list').append(button);
+  });
+}
+renderHistory();
+$('clear-history').addEventListener('click', () => { history = []; saveHistory(); renderHistory(); });
+
+function showTab(name) {
+  activeTab = name;
+  document.querySelectorAll('.tab').forEach(button => { const selected = button.dataset.tab === name; button.classList.toggle('active', selected); button.setAttribute('aria-selected', selected); button.tabIndex = selected ? 0 : -1; });
+  document.querySelectorAll('.tool-panel').forEach(panel => { panel.hidden = true; });
+  const calculator = ['normal', 'scientific'].includes(name);
+  $(calculator ? 'calculator-panel' : `${name}-panel`).hidden = false;
+  if (calculator) {
+    $('calculator-panel').setAttribute('aria-labelledby', `tab-${name}`);
+    $('calculator-title').textContent = name === 'normal' ? 'Calculadora normal' : 'Calculadora científica';
+    $('calculator-mode').textContent = name === 'normal' ? 'O ESSENCIAL, BEM FEITO' : 'VÁ ALÉM DO BÁSICO';
+    $('scientific-keys').hidden = name !== 'scientific'; $('angle-mode').hidden = name !== 'scientific';
+  }
+}
+document.querySelectorAll('.tab').forEach((button, index, list) => {
+  button.addEventListener('click', () => showTab(button.dataset.tab));
+  button.addEventListener('keydown', event => {
+    if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+    event.preventDefault(); const next = event.key === 'Home' ? 0 : event.key === 'End' ? list.length - 1 : (index + (event.key === 'ArrowRight' ? 1 : -1) + list.length) % list.length;
+    showTab(list[next].dataset.tab); list[next].focus();
+  });
+});
+showTab('normal');
+function clearError() { $('calculator-error').textContent = 'Porcentagem: x% equivale a x ÷ 100.'; $('calculator-error').classList.remove('has-error'); }
+function appendKey(key) {
+  const input = $('expression');
+  if ((finished && !['+', '-', '−', '*', '×', '/', '÷', '^', '%', '!'].includes(key)) || (input.value === '0' && /^[0-9a-zπ(]/.test(key))) input.value = '';
+  if (input.value.length + key.length <= 500) input.value += key;
+  finished = false; clearError(); input.scrollLeft = input.scrollWidth;
+}
+function runCalculation() {
+  try {
+    const expression = $('expression').value; const result = calculate(expression, degrees);
+    $('expression').value = String(Number(result.toPrecision(14))).replace('.', ',');
+    $('expression-label').textContent = `${expression} =`;
+    history.unshift({ expression, result }); history = history.slice(0, 25); saveHistory(); renderHistory();
+    finished = true; clearError();
+  } catch (error) { $('calculator-error').textContent = error.message; $('calculator-error').classList.add('has-error'); }
+}
+function action(name) {
+  if (name === 'equals') return runCalculation();
+  if (name === 'clear') { $('expression').value = '0'; $('expression-label').textContent = 'VAMOS FAZER AS CONTAS?'; }
+  if (name === 'backspace') $('expression').value = $('expression').value.slice(0, -1) || '0';
+  if (name === 'sign') $('expression').value = `-(${$('expression').value})`;
+  finished = false; clearError();
+}
+document.querySelectorAll('[data-key]').forEach(button => button.addEventListener('click', () => appendKey(button.dataset.key)));
+document.querySelectorAll('[data-action]').forEach(button => button.addEventListener('click', () => action(button.dataset.action)));
+$('expression').addEventListener('input', () => { finished = false; clearError(); });
+document.addEventListener('keydown', event => {
+  if (!['normal', 'scientific'].includes(activeTab) || event.ctrlKey || event.metaKey || event.altKey) return;
+  const tag = event.target.tagName;
+  if (tag === 'INPUT' && event.target.id !== 'expression') return;
+  if (tag === 'SELECT' || tag === 'TEXTAREA') return;
+  if (event.key === 'Enter' && tag !== 'BUTTON' || event.key === '=') { event.preventDefault(); runCalculation(); }
+  else if (event.key === 'Escape') { event.preventDefault(); action('clear'); }
+  else if (tag !== 'INPUT') {
+    if (/^[0-9.+\-*/()%!^]$/.test(event.key)) { event.preventDefault(); appendKey(event.key); }
+    else if (event.key === 'Backspace') { event.preventDefault(); action('backspace'); }
+  }
+});
+$('angle-mode').addEventListener('click', () => { degrees = !degrees; $('angle-mode').textContent = degrees ? 'DEG' : 'RAD'; });
+$('copy-result').addEventListener('click', async () => { try { await navigator.clipboard.writeText($('expression').value); toast('Resultado copiado.'); } catch { $('expression').focus(); $('expression').select(); toast('Selecione e copie o resultado com Ctrl+C.'); } });
+
+function updateFinance() {
+  const mode = $('finance-mode').value;
+  $('contribution-label').hidden = mode !== 'compound'; $('contribution').disabled = mode !== 'compound'; $('payment-row').hidden = mode !== 'loan';
+  try {
+    const result = finance({ mode, principal: $('principal').valueAsNumber, rate: $('interest-rate').valueAsNumber, months: $('months').valueAsNumber, contribution: mode === 'compound' ? $('contribution').valueAsNumber : 0 });
+    $('finance-total').textContent = money(result.total); $('finance-invested').textContent = money(result.invested); $('finance-interest').textContent = money(result.interest); $('finance-payment').textContent = money(result.payment);
+    $('finance-result-label').textContent = mode === 'loan' ? 'Total pago ao final do prazo' : 'Saldo ao final do período';
+    $('invested-label').textContent = mode === 'loan' ? 'Valor financiado' : 'Total investido';
+    $('finance-note').textContent = mode === 'loan' ? 'Parcelas fixas pela tabela Price, primeira parcela após um mês. Sem IOF, seguros, tarifas ou outros componentes do CET.' : mode === 'simple' ? 'Juros calculados sobre o capital inicial. Simulação bruta, sem impostos, taxas ou inflação.' : 'Aportes ao final de cada mês. Simulação bruta, sem impostos, taxas ou inflação.';
+    $('finance-error').textContent = '';
+  } catch (error) { $('finance-error').textContent = error.message; ['finance-total', 'finance-invested', 'finance-interest', 'finance-payment'].forEach(id => { $(id).textContent = '—'; }); }
+}
+$('finance-form').addEventListener('submit', event => { event.preventDefault(); updateFinance(); });
+$('finance-form').addEventListener('input', updateFinance);
+updateFinance();
+
+async function api(path) {
+  if (document.documentElement.dataset.standalone === 'true') {
+    const url = new URL(path, 'https://orbita.invalid');
+    try {
+      if (url.pathname === '/api/market') return await marketRates();
+      if (url.pathname === '/api/ptax') {
+        const date = url.searchParams.get('date') || brazilDate();
+        if (!validDate(date) || date > brazilDate()) throw new Error('Selecione uma data válida, até hoje.');
+        return await ptaxRates(date, url.searchParams.get('latest') === 'true');
+      }
+      throw new Error('Consulta desconhecida.');
+    } catch (error) {
+      if (error instanceof TypeError || error.name === 'TimeoutError') throw new Error('Não foi possível acessar a fonte de câmbio. Verifique sua conexão. A fonte também pode bloquear consultas pelo navegador.');
+      throw error;
+    }
+  }
+  const response = await fetch(path, { signal: AbortSignal.timeout(16000) });
+  const data = await response.json();
+  if (!response.ok) throw new Error(data.error || 'A fonte não está disponível.');
+  return data;
+}
+let marketLoading = false, marketData;
+async function refreshRates() {
+  if (marketLoading) return; marketLoading = true; $('refresh-rates').disabled = true;
+  await Promise.allSettled([
+    (async () => {
+      try {
+        const data = await api('/api/market'); marketData = data;
+        for (const [code, quote] of Object.entries(data.rates)) {
+          $(`rate-${code}`).textContent = money(quote.buy, 'BRL', 4);
+          $(`change-${code}`).textContent = `${quote.change >= 0 ? '↗ +' : '↘ '}${number(quote.change, 2)}%`;
+          $(`change-${code}`).classList.toggle('negative', quote.change < 0);
+          const stamp = new Date(quote.timestamp);
+          $(`stamp-${code}`).textContent = `${stamp.toLocaleDateString('pt-BR', { timeZone: 'America/Sao_Paulo' })} · ${stamp.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit', timeZone: 'America/Sao_Paulo' })} BRT`;
+        }
+        $('market-note').textContent = 'Compra comercial: AwesomeAPI · Consulta a cada 60 s, conforme disponibilidade da fonte · PTAX: Banco Central';
+      } catch {
+        for (const code of ['USD', 'EUR', 'GBP']) $(`stamp-${code}`).textContent = marketData ? 'Sem atualização · última cotação recebida' : 'Fonte temporariamente indisponível';
+        $('market-note').textContent = 'Não foi possível atualizar o câmbio. Os valores não são estimados. As calculadoras continuam disponíveis.';
+      }
+    })(),
+    (async () => {
+      try {
+        const data = await api(`/api/ptax?date=${today}&latest=true`);
+        $('rate-PTAX').textContent = money(data.rates.USD.sell, 'BRL', 4); $('stamp-PTAX').textContent = `Último fechamento · ${dateLabel(data.date)}`;
+      } catch { $('rate-PTAX').textContent = '—'; $('stamp-PTAX').textContent = 'Fechamento indisponível · tente novamente'; }
+    })()
+  ]);
+  marketLoading = false; $('refresh-rates').disabled = false;
+}
+$('refresh-rates').addEventListener('click', refreshRates);
+refreshRates(); setInterval(() => { if (!document.hidden) refreshRates(); }, 60000);
+document.addEventListener('visibilitychange', () => { if (!document.hidden) refreshRates(); });
+
+function invalidateCurrency() { currencyRequest++; ['currency-result', 'currency-unit-rate', 'currency-date'].forEach(id => { $(id).textContent = '—'; }); $('currency-error').textContent = ''; $('convert-currency').disabled = false; }
+$('currency-form').addEventListener('input', invalidateCurrency);
+$('swap-currencies').addEventListener('click', () => { const from = $('currency-from').value; $('currency-from').value = $('currency-to').value; $('currency-to').value = from; invalidateCurrency(); });
+$('currency-form').addEventListener('submit', async event => {
+  event.preventDefault(); invalidateCurrency(); const request = currencyRequest;
+  const amount = $('currency-amount').valueAsNumber, from = $('currency-from').value, to = $('currency-to').value, side = $('quote-side').value, date = $('reference-date').value;
+  $('convert-currency').disabled = true; $('currency-result-label').textContent = 'Consultando boletim oficial…';
+  try {
+    const data = await api(`/api/ptax?date=${encodeURIComponent(date)}`);
+    if (request !== currencyRequest) return;
+    const result = convertCurrency(amount, from, to, data.rates, side);
+    $('currency-result').textContent = money(result, to);
+    $('currency-unit-rate').textContent = `1 ${from} = ${number(convertCurrency(1, from, to, data.rates, side), 6)} ${to}`;
+    $('currency-date').textContent = `${dateLabel(data.date)} · ${side === 'sell' ? 'Venda' : 'Compra'}`;
+  } catch (error) { if (request === currencyRequest) $('currency-error').textContent = error.name === 'TimeoutError' ? 'A consulta demorou mais que o esperado. Tente novamente.' : error.message; }
+  finally { if (request === currencyRequest) { $('convert-currency').disabled = false; $('currency-result-label').textContent = 'Valor convertido'; } }
+});
+
+Object.entries(units).forEach(([id, item]) => $('measure-category').add(new Option(item.label, id)));
+function populateUnits() {
+  $('measure-from').replaceChildren(); $('measure-to').replaceChildren();
+  Object.entries(units[$('measure-category').value].units).forEach(([id, item]) => { $('measure-from').add(new Option(`${item[0]} (${id})`, id)); $('measure-to').add(new Option(`${item[0]} (${id})`, id)); });
+  $('measure-to').selectedIndex = 1; updateMeasures();
+}
+function updateMeasures() {
+  const category = $('measure-category').value, from = $('measure-from').value, to = $('measure-to').value;
+  try {
+    const result = convert($('measure-amount').valueAsNumber, category, from, to);
+    $('measure-result').textContent = `${number(result)} ${to}`;
+    $('measure-result-label').textContent = `${number($('measure-amount').valueAsNumber)} ${from} equivalem a`;
+    $('measure-equivalence').textContent = category === 'temperature' ? (to === 'F' ? '°F = °C × 9/5 + 32' : to === 'K' ? 'K = °C + 273,15' : 'Conversão para graus Celsius') : `1 ${from} = ${number(convert(1, category, from, to))} ${to}`;
+    $('measure-category-label').textContent = units[category].label; $('measure-error').textContent = '';
+  } catch (error) { $('measure-result').textContent = '—'; $('measure-equivalence').textContent = '—'; $('measure-error').textContent = error.message; }
+}
+$('measure-category').addEventListener('change', populateUnits);
+['measure-amount', 'measure-from', 'measure-to'].forEach(id => $(id).addEventListener('input', updateMeasures));
+$('measures-form').addEventListener('submit', event => { event.preventDefault(); updateMeasures(); });
+$('swap-measures').addEventListener('click', () => { const from = $('measure-from').value; $('measure-from').value = $('measure-to').value; $('measure-to').value = from; updateMeasures(); });
+populateUnits();
+
+</script>
+</body>
+</html>

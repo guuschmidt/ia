@@ -1,0 +1,18 @@
+COMO ABRIR O ÓRBITA
+
+1. Extraia o arquivo ZIP (no Windows: botão direito > Extrair Tudo).
+2. Abra a pasta extraída.
+3. Dê dois cliques no arquivo ABRIR_ORBITA.html.
+
+Pronto: o aplicativo abre no seu navegador.
+Não precisa instalar Node.js, abrir terminal nem digitar comandos.
+
+Se aparecer o código em vez do aplicativo, clique com o botão direito
+em ABRIR_ORBITA.html > Abrir com > Google Chrome, Microsoft Edge ou Firefox.
+
+As calculadoras e medidas funcionam sem internet. As cotações de moedas
+e a PTAX precisam de conexão e da disponibilidade das fontes públicas.
+Algumas fontes podem impedir consultas diretas pelo navegador; nesse caso,
+o aplicativo informa que a cotação está indisponível.
+
+Para o uso normal, ignore as instruções de servidor e desenvolvimento.

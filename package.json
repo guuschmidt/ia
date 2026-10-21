@@ -6,8 +6,9 @@
   "scripts": {
     "start": "node --use-env-proxy server.js",
     "dev": "node --use-env-proxy --watch server.js",
+    "build:standalone": "node scripts/build-standalone.js",
     "test": "node --test",
-    "check": "node --check server.js && node --check public/app.js && node --check public/math.js"
+    "check": "node --check server.js && node --check public/app.js && node --check public/math.js && node --check public/rates.js && node --check scripts/build-standalone.js"
   },
   "engines": { "node": ">=24.5" }
 }

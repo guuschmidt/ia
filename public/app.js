@@ -1,4 +1,5 @@
 import { calculate, finance, convert, convertCurrency, units } from './math.js';
+import { marketRates, ptaxRates, validDate, brazilDate } from './rates.js';
 
 const $ = (id) => document.getElementById(id);
 const number = (n, max = 10) => new Intl.NumberFormat('pt-BR', { maximumFractionDigits: max }).format(n);
@@ -106,7 +107,27 @@ $('finance-form').addEventListener('submit', event => { event.preventDefault(); 
 $('finance-form').addEventListener('input', updateFinance);
 updateFinance();
 
-async function api(path) { const response = await fetch(path, { signal: AbortSignal.timeout(16000) }); const data = await response.json(); if (!response.ok) throw new Error(data.error || 'A fonte não está disponível.'); return data; }
+async function api(path) {
+  if (document.documentElement.dataset.standalone === 'true') {
+    const url = new URL(path, 'https://orbita.invalid');
+    try {
+      if (url.pathname === '/api/market') return await marketRates();
+      if (url.pathname === '/api/ptax') {
+        const date = url.searchParams.get('date') || brazilDate();
+        if (!validDate(date) || date > brazilDate()) throw new Error('Selecione uma data válida, até hoje.');
+        return await ptaxRates(date, url.searchParams.get('latest') === 'true');
+      }
+      throw new Error('Consulta desconhecida.');
+    } catch (error) {
+      if (error instanceof TypeError || error.name === 'TimeoutError') throw new Error('Não foi possível acessar a fonte de câmbio. Verifique sua conexão. A fonte também pode bloquear consultas pelo navegador.');
+      throw error;
+    }
+  }
+  const response = await fetch(path, { signal: AbortSignal.timeout(16000) });
+  const data = await response.json();
+  if (!response.ok) throw new Error(data.error || 'A fonte não está disponível.');
+  return data;
+}
 let marketLoading = false, marketData;
 async function refreshRates() {
   if (marketLoading) return; marketLoading = true; $('refresh-rates').disabled = true;
